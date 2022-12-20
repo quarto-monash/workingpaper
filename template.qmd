@@ -22,14 +22,14 @@ jelcodes: C10,C14,C22
 blind: false
 cover: true
 toc: false
-bibliography: references.bib
-biblio-style: authoryear-comp
-format: wp-pdf
+number-sections: true
 fig-height: 5
 fig-width: 8
-keep-tex: true
-number-sections: true
 cite-method: biblatex
+bibliography: references.bib
+biblio-style: authoryear-comp
+keep-tex: true
+format: wp-pdf
 execute:
   echo: false
   warning: false
