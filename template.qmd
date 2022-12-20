@@ -1,0 +1,59 @@
+---
+title: "Our great idea"
+author:
+- familyname: Curie
+  othernames: Marie
+  address: University of Paris, Somewhere in France, PX2039
+  email: mcurie.notreal@gmail.com
+  correspondingauthor: true
+- familyname: Khan
+  othernames: Genghis
+  address:
+    - Department of Econometrics & Business Statistics
+    - Clayton VIC 3800
+    - Australia
+- familyname: Ash
+  othernames: Monique
+  email: Monique.Ash@monash.edu
+abstract: "A brief summary of our ideas"
+keywords: "blah, blah"
+wpnumber: no/yr
+jelcodes: C10,C14,C22
+blind: false
+cover: true
+toc: false
+bibliography: references.bib
+biblio-style: authoryear-comp
+format: wp-pdf
+fig-height: 5
+fig-width: 8
+keep-tex: true
+number-sections: true
+cite-method: biblatex
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+# Introduction
+
+In a famous paper, @BC64 introduced a family of transformations \dots
+
+```{r}
+#| label: fig-density
+#| fig-cap: Simulated data from a N(0,1) distribution.
+library(tidyverse)
+set.seed(2022-12-20)
+df <- tibble(x = rnorm(200))
+df |>
+  ggplot(aes(x=x)) +
+  geom_density(bw = "SJ") +
+  geom_rug()
+```
+
+@fig-density shows a kernel density estimate of simulated data from a N(0,1) distribution. The sample variance is given by
+$$
+  s^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i-\bar{x})^2 = `r round(sd(df$x), 2)`.
+$$ {#eq-s2}
+Note that @eq-s2 is an unbiased estimate of the variance, but it is not the maximum likelihood estimate [@Rice2007, p.269].
