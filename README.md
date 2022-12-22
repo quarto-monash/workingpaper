@@ -3,8 +3,9 @@
 
 # Monash Working Paper Format Template
 
-This is a Quarto template that assists you in creating a working paper,
-optionally with Monash University branding.
+This is a Quarto template that assists you in creating a working paper
+for the Department of Econometrics & Business Statistics, Monash
+University.
 
 ## Creating a new working paper
 
