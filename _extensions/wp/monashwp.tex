@@ -386,6 +386,7 @@ $endif$
 
 %% BIBLIOGRAPHY
 
+$if(biblatex)$
 \makeatletter
 \@ifpackageloaded{biblatex}{}{\usepackage[style=authoryear-comp, backend=biber, natbib=true]{biblatex}}
 \makeatother
@@ -414,7 +415,7 @@ $endif$
 \renewcommand*{\finalnamedelim}{%
   %\ifnumgreater{\value{liststop}}{2}{\finalandcomma}{}% there really should be no funny Oxford comma business here
   \addspace\&\space}
-
+$endif$
 
 $if(wpnumber)$
 \wp{$wpnumber$}
