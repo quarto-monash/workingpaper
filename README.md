@@ -31,8 +31,4 @@ quarto install extension numbats/monash-quarto-workingpaper
 
 ## Example
 
-<div>
-
 [![](examples/template.png)](examples/template.pdf)
-
-</div>

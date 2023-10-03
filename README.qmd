@@ -11,12 +11,8 @@ library(tidyverse)
 library(quarto)
 library(magick)
 
-# Render template
-fs::dir_copy("_extensions/wp", "_extensions/numbats/wp")
-fs::file_copy("examples/references.bib", "references.bib")
 quarto_render(input = "template.qmd")
-fs::dir_delete("_extensions/numbats")
-fs::file_delete("references.bib")
+fs::file_delete(c("AACSB.png","AMBA.png","EQUIS.png","MBSportrait.jpg","monash2.png"))
 # Convert rendered PDF to PNG
 image_read_pdf("template.pdf") |>
   image_montage(geometry = "x2000+25+35", tile = "2x2", bg = "grey92", shadow = TRUE) |>
