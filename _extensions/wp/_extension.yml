@@ -1,11 +1,41 @@
-title: Monash Working Paper Format Template
+title: Monash Working Paper
 author: Rob J Hyndman
-version: 0.1.0
+version: 2.0.0
 contributes:
   formats:
     pdf:
-      template: monashwp.tex
+      documentclass: article
+      papersize: a4
+      fontsize: 11pt
+      date: today
+      date-format: "D MMMM YYYY"
+      toc: false
       pdf-engine: pdflatex
+      geometry:
+      - top=2.5cm
+      - bottom=2.5cm
+      - left=2.5cm
+      - right=2.5cm
+      block-headings: false
+      cite-method: biblatex
+      biblio-style: authoryear-comp
+      colorlinks: true
+      fig-height: 5
+      fig-width: 8
+      number-sections: true
+      number-depth: 2
+      knitr:
+        opts_chunk:
+          echo: false
+          warning: false
+          message: false
+      header-includes: |
+        \usepackage{orcidlink}
+        \definecolor{mypink}{RGB}{219, 48, 122}
+      template-partials:
+        - "before-title.tex"
+        - "before-body.tex"
+        - "title.tex"
       format-resources:
         - monash2.png
         - MBSportrait.jpg

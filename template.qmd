@@ -1,39 +1,37 @@
 ---
 title: "Our great idea"
 author:
-- familyname: Curie
-  othernames: Marie
-  address: University of Paris, Somewhere in France, PX2039
+- name: Marie Curie
+  affiliations:
+    - name: University of Paris
+      department: Department of Radiation
+      address: Somewhere
+      city: Paris
+      country: France
+      postal-code: PX2039
   email: mcurie.notreal@gmail.com
-  correspondingauthor: true
-- familyname: Khan
-  othernames: Genghis
-  address:
-    - Department of Econometrics & Business Statistics
-    - Clayton VIC 3800
-    - Australia
-- familyname: Ash
-  othernames: Monique
+  corresponding: true
+- name: Genghis Khan
+  affiliations:
+    - name: Monash University
+      department: Department of Econometrics & Business Statistics
+      city: Clayton VIC
+      country: Australia
+      postal-code: 3800
+- name: Monique Ash
   email: Monique.Ash@monash.edu
-abstract: "A brief summary of our ideas"
-keywords: "blah, blah"
+abstract: |
+  A brief summary of our ideas
+keywords: [blah, blah]
+bibliography: references.bib
 wpnumber: no/yr
 jelcodes: C10,C14,C22
 blind: false
 cover: true
-toc: false
-number-sections: true
-fig-height: 5
-fig-width: 8
-cite-method: biblatex
-bibliography: references.bib
-biblio-style: authoryear-comp
-keep-tex: true
-format: wp-pdf
-execute:
-  echo: false
-  warning: false
-  message: false
+linestretch: 1.5
+format:
+  wp-pdf:
+    keep-tex: true
 ---
 
 # Introduction
@@ -57,3 +55,7 @@ $$
   s^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i-\bar{x})^2 = `r round(sd(df$x), 2)`.
 $$ {#eq-s2}
 Note that @eq-s2 is an unbiased estimate of the variance, but it is not the maximum likelihood estimate [@Rice2007, p.269].
+
+New paragraph.
+
+## Subsection header

@@ -1,0 +1,32 @@
+$-- Implements the frontmatter, title page, and abstract.
+$--
+$-- %%%% TODO %%%%%
+$-- Customize is needed, otherwise remove this partials to use Quarto default one
+$-- %%%%%%%%%%%%%%%%
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+$if(title)$
+$if(beamer)$
+\frame{\titlepage}
+$else$
+\maketitle
+$endif$
+$endif$
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$
+
+$if(keywords)$
+\begin{keywords}
+  $for(keywords/allbutlast)$$keywords$; $endfor$
+  $for(keywords/last)$$keywords$$endfor$
+\end{keywords}
+$else$
+  $if(abstract)$
+  \vspace{0.25cm}\par\hrule\vspace{0.5cm}\par
+  $endif$
+$endif$
