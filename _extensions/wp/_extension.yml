@@ -12,6 +12,7 @@ contributes:
       date-format: "D MMMM YYYY"
       toc: false
       pdf-engine: pdflatex
+      linestretch: 1.5
       geometry:
       - top=2.5cm
       - bottom=2.5cm
