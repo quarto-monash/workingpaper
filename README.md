@@ -14,7 +14,7 @@ You can use this as a template to create a working paper. To do this,
 use the following command:
 
 ``` bash
-quarto use template numbats/monash-quarto-workingpaper
+quarto use template quarto-monash/-workingpaper
 ```
 
 This will install the extension and create an example qmd file that you
@@ -27,7 +27,7 @@ document. From the quarto project or document directory, run the
 following command to install this format:
 
 ``` bash
-quarto install extension numbats/monash-quarto-workingpaper
+quarto install extension quarto-monash/-workingpaper
 ```
 
 ## Example
