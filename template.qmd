@@ -32,6 +32,8 @@ linestretch: 1.5
 format:
   wp-pdf:
     keep-tex: true
+filters:
+  - blindable-div
 ---
 
 # Introduction
@@ -59,3 +61,11 @@ Note that @eq-s2 is an unbiased estimate of the variance, but it is not the maxi
 New paragraph.
 
 ## Subsection header
+
+::: {.blindable}
+
+# Acknowledgement {.unnumbered}
+
+We would like to thank our pet goldfish...
+
+:::
